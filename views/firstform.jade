@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+ div
+
+  h2 First form
+  p Enter a message using the form below.
+
+  form(id="frmFirst" name="frmFirst" action="/firstform_processing" method="GET")
+   label(for="txtMessage") Message
+   input(type="text" name="txtMessage" id="txtMessage")
+   input(type="submit" name="btnSubmit" id="btnSubmit")
