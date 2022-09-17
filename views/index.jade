@@ -1,5 +1,11 @@
 extends layout
 
 block content
+
+ div
   h1= title
   p Welcome to #{title}
+
+ div 
+  #[a(href="/tparams/gryffindor") Test Params]
+  #[a(href="/tquery?house=slytherin") Test query]

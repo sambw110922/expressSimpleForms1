@@ -40,7 +40,6 @@ router.get("/firstform_processing", function(req, res){
 
 //  =====================
 
-
 router.get("/secondform", function(req, res){
   res.render("secondform");
 });
@@ -64,5 +63,24 @@ router.post("/secondform_processing", function(req, res){
   res.render("secondformresults", { formdata : d });
 
 });
+
+//  ======================
+
+router.get('/tparams/:house', function(req, res, next) {
+  
+  var hp = req.params.house;
+
+  res.render('testparams', { house : hp });
+
+});
+
+router.get('/tquery?:house', function(req, res, next) {
+  
+  var hp = req.query.house;
+
+  res.render('testquery', { house : hp });
+
+});
+
 
 module.exports = router;
